@@ -5,96 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="dest-styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="dest-styles.css" preload="style">
+    <script defer src="script.js"></script>
 </head>
 
 <body>
-    <!--Font Awesome CDN-->
-   
-  
-    <div class="container">
-
-        <div class="slide">
-
-            <div class="item" style="background-image: url(places/agra_fort.webp);">
-                <div class="content">
-                    <div class="name">Agra Fort</div>
-                    <div class="des">"This 16th-century Mughal fort, built by Emperor Akbar, features red sandstone and marble architecture. It houses palaces, mosques, and halls, showcasing the grandeur of Mughal design."</div>
-                    <button class="btn-more">See More</button>
-                </div>
-            </div>
-            <div class="item" style="background-image: url(places/ahmedabad.webp);">
-                <div class="content">
-                    <div class="name">HISTORIC CITY OF AHMEDABAD</div>
-                    <div class="des">"This city showcases Indo-Islamic architecture and urban planning, with landmarks like the Jama Masjid and Sidi Saiyyed Mosque. Its old city is also known for its traditional pol houses."</div>
-                    <button class="btn-more">See More</button>
-                </div>
-            </div>
-            <div class="item" style="background-image: url(places/ajanta_ellora.webp);">
-                <div class="content">
-                    <div class="name">Ajanta Caves</div>
-                    <div class="des">"These ancient rock-cut caves are a masterpiece of Buddhist art. Dating back to the 2nd century BCE to the 6th century CE, they feature murals and sculptures depicting Jataka tales, Buddhist traditions, and monastic life."
-                    </div>
-                    <button class="btn-more">See More</button>
-                </div>
-            </div>
-            <div class="item" style="background-image: url(places/champaner.webp);">
-                <div class="content">
-                    <div class="name">CHAMPANER-PAVAGADH ARCHAEOLOGICAL PARK</div>
-                    <div class="des">"This site is a mix of Hindu and Islamic architecture, featuring mosques, forts, and palaces. The Kalika Mata Temple atop the Pavagadh hill is a major pilgrimage site. The park also includes the Jami Masjid, a UNESCO World Heritage Site."
-                    </div>
-                    <button class="btn-more">See More</button>
-                </div>
-            </div>
-            <div class="item" style="background-image: url(places/sundarban.webp);">
-                <div class="content">
-                    <div class="name">SUNDARBANS NATIONAL PARK</div>
-                    <div class="des">"A UNESCO World Heritage Site, this mangrove forest is the largest in the world and a critical habitat for the Royal Bengal Tiger. It also supports a variety of aquatic and avian species."</div>
-                    <button class="btn-more">See More</button>
-                </div>
-            </div>
-            <div class="item" style="background-image: url(places/great_living_chola.webp);">
-                <div class="content">
-                    <div class="name">GREAT LIVING CHOLA TEMPLES</div>
-                    <div class="des">"These temples, including Brihadeeswarar Temple in Thanjavur, Airavatesvara Temple in Darasuram, and Brihadeeswarar Temple in Gangaikonda Cholapuram, are UNESCO World Heritage Sites. They showcase the architectural and artistic achievements of the Chola dynasty."
-                    </div>
-                    <button class="btn-more">See More</button>
-                </div>
-            </div>
-            <div class="item" style="background-image: url(places/kajiranga_npark.webp);">
-                <div class="content">
-                    <div class="name">KAKATIYA TEMPLE</div>
-                    <div class="des">"These temples, including the Ramappa Temple, are notable for their intricate carvings, floating bricks, and structural innovation, reflecting the architectural brilliance of the Kakatiya dynasty."
-                    </div>
-                    <button class="btn-more">See More</button>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="button">
-            <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
-            <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
-        </div>
-
+    <div class="hero">
+        <img src="Assets/Travello.svg" alt="Travello">
     </div>
+    <div class="search">
+        <input type="search" id="search-input" placeholder="Search for your destination...">
+        <button class="search-btn" onclick="searchPlaces()">Search</button>
+    </div>
+    <div class="places-container" id="places-container"></div>
 </body>
-<script>
-    let next = document.querySelector('.next')
-    let prev = document.querySelector('.prev')
-
-    next.addEventListener('click', function () {
-        let items = document.querySelectorAll('.item')
-        document.querySelector('.slide').appendChild(items[0])
-    })
-
-    prev.addEventListener('click', function () {
-        let items = document.querySelectorAll('.item')
-        document.querySelector('.slide').prepend(items[items.length - 1]) // here the length of items = 6
-    })
-</script>
 
 </html>

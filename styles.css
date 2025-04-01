@@ -23,8 +23,7 @@ body::-webkit-scrollbar{
 
 #hero>img {
     /* font-weight: 800; */
-    height: 68px;
-    width: 168px;
+    height: 3rem;
 }
 
 #nav {
