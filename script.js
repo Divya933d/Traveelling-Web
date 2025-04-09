@@ -10,10 +10,16 @@ function searchPlaces() {
 
     // Sample data for demonstration
     const placesData = {
+        // "France": [
+        //     { name: "Eiffel Tower", image: "Assets/Eiffiel Tower.jpg", price: "$120" },
+        //     { name: "Louvre Museum", image: "Assets/Lovure.jpg", price: "$80" },
+        //     { name: "Mont Saint-Michel", image: "Assets/Mont.jpg", price: "$150" },
+            
+        // ],
         "France": [
-            { name: "Eiffel Tower", image: "Assets/Eiffiel Tower.jpg", price: "$120" },
-            { name: "Louvre Museum", image: "Assets/Lovure.jpg", price: "$80" },
-            { name: "Mont Saint-Michel", image: "Assets/Mont.jpg", price: "$150" },
+            { name: "Eiffel Tower", image: "Assets/Eiffiel Tower.webp", price: "$120" },
+            { name: "Louvre Museum", image: "Assets/Lovure.webp", price: "$80" },
+            { name: "Mont Saint-Michel", image: "Assets/Mont.webp", price: "$150" },
             
         ],
         "Italy": [
